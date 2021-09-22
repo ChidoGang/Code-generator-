@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Quiz Challenge</title>
+          <link rel="style.css" type="style.css" href="style.css">
+          <link rel="stylesheet" href="./assets/css/style.css">
+     </head>
+
+     <body>
+          <nav class="navbar">
+               <button id="highscoreBtn" class="btn">View Highscore</button>
+               <h2 id="scoreEl" style="display:none"></h2>
+               <h2 id="timerEl" style="display:none"></h2>
+          </nav>
+
+          <section id="introScreen" class="introScreen">
+               <h1>Coding Quiz Challenge</h1>
+               <center><p>
+                    Try to answer the following questions within the time limit. <br> 
+                    Keep in mind that incorrect answers will shorten your time by 10 seconds. <br>
+                    This test will assess yhour knowledge on basic coding Quesions with 5 muliple choice questions.
+               </p></center>
+               <button id="startBtn" class="btn">Start the Quiz!</button>
+          </section>
+
+          <section id="quizScreen" class="quizScreen" style="display:none">
+               <h2 id="question"></h2>
+               <div>
+                    <button id="answer1" class="btn" onclick="checkAnswer('1')"></button>
+                    <button id="answer2" class="btn" onclick="checkAnswer('2')"></button>
+                    <button id="answer3" class="btn" onclick="checkAnswer('3')"></button>
+                    <button id="answer4" class="btn" onclick="checkAnswer('4')"></button>
+               </div>
+          </section>
+
+          <section id="submitScreen" class="submitScreen" style="display:none">
+               <h1>All Done!</h1>
+               <p>Your final score is: <span id="finalscoreEl"></span></p>
+               <form >
+                    <input id="initialEl" type="text" placeholder="Enter your Initials">
+                    <button id="submitBtn" class="btn">Submit</button>
+               </form>
+          </section>
+
+          <div id="highscoreScreen" class="highscoreScreen" style="display:none">
+               <h1>Top scores!</h1>
+               <p id="highscoreList"></p>
+               <div>
+                    <button id="homeBtn" class="btn">Home</button>
+                    <button id="clearBtn" class="btn">Clear Scores</button>
+               </div>
+          </div>
+
+          <script type="text/javascript" src="./assets/js/script.js"></script>
+     </body>
+</html>
